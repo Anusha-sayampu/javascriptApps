@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      localStorage.setItem("userid", "1234");
+      localStorage.clear();
+      let uid = localStorage.getItem("userid");
+      document.getElementById("demo").innerHTML = `userid:${uid}`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="signupvalidate.js"></script>
+  </head>
+  <body>
+    <form onsubmit="return validate()" action="success.html" method="post">
+      <label for="username">UserName : </label>
+      <input type="text" id="username" name="username" />
+      <br /><!--void tag-->
+      <br />
+
+      <label for="password">Password : </label>
+      <input type="password" id="password" name="password" />
+      <br /><br />
+      <label for="confirmpassword">confirm password : </label>
+      <input type="password" id="confirmpassword" name="confirmpassword" />
+      <br /><br />
+      <label for="mobileno">mobileno : </label>
+      <input type="tel" id="mobileno" name="mobileno" />
+      <br /><br />
+      <label for="email">email : </label>
+      <input type="email" id="email" name="email" />
+      <br /><br />
+      <label>gender:</label>
+      <label for="male">male</label>
+      <input type="radio" id="male" name="gender" />
+      <label for="female">female</label>
+      <input type="radio" id="female" name="gender" />
+      <br /><br />
+      <label for="dob">date of birth:</label>
+      <input type="date" id="dob" name="dob" />
+      <br /><br />
+      <label for="address">Address:</label>
+      <textarea
+        id="address"
+        name="address"
+        rows="4"
+        cols="40"
+        required
+      ></textarea>
+      <br /><br />
+
+      <label for="qualification">Qualification:</label><br />
+      <select id="qualification" name="qualification" required>
+        <option value="">-- Select Qualification --</option>
+        <option value="10th">10th</option>
+        <option value="12th">12th</option>
+        <option value="diploma">Diploma</option>
+        <option value="ug">Under Graduation (UG)</option>
+        <option value="pg">Post Graduation (PG)</option>
+        <option value="phd">PhD</option>
+      </select>
+      <br /><br />
+
+      <label>Skills:</label>
+      <ul style="list-style-type: none">
+        <li><input type="checkbox" name="skills[]" value="html" /> HTML</li>
+        <li><input type="checkbox" name="skills[]" value="css" /> CSS</li>
+        <li>
+          <input type="checkbox" name="skills[]" value="javascript" />
+          JavaScript
+        </li>
+        <li><input type="checkbox" name="skills[]" value="python" /> Python</li>
+        <li><input type="checkbox" name="skills[]" value="java" /> Java</li>
+      </ul>
+      <br /><br />
+
+      <label>Shift:</label>
+      <ul style="list-style-type: none">
+        <li>
+          <input type="checkbox" name="shift[]" value="morning" /> Morning
+        </li>
+        <li>
+          <input type="checkbox" name="shift[]" value="afternoon" /> Afternoon
+        </li>
+        <li>
+          <input type="checkbox" name="shift[]" value="evening" /> Evening
+        </li>
+        <li><input type="checkbox" name="shift[]" value="night" /> Night</li>
+      </ul>
+      <br /><br />
+      <label for="resume">Upload Resume:</label><br />
+      <input type="file" id="resume" name="resume" required />
+      <br /><br />
+
+      <!-- <button id="loginbt">Login</button> -->
+      <input type="submit" value="login" />
+      <br />
+    </form>
+  </body>
+</html>
